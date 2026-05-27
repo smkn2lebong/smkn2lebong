@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Kegiatan | SMK Negeri 2 Lebong</title>
+  <meta name="description" content="Dokumentasi foto dan video kegiatan siswa SMK Negeri 2 Lebong. Saksikan momen-momen penting pembelajaran dan kegiatan sekolah." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      aspect-ratio: 1 / 0.8;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      padding: 1rem;
+      color: white;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: var(--radius);
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="header-top">
+    <div class="container">
+      <div class="contact-info">
+        <span><i class="fas fa-map-marker-alt"></i> Tangua, Kec. Uram Jaya, Lebong, Bengkulu</span>
+        <span style="margin-left: 1.5rem;"><i class="fas fa-envelope"></i> smkn2lebong@sch.id</span>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Logo SMK Negeri 2 Lebong" class="logo-img">
+        <div class="logo-text">
+          <h1>SMK Negeri 2 Lebong</h1>
+          <p>NPSN 10703078 | Terakreditasi B</p>
+        </div>
+      </div>
+      <button class="menu-toggle">☰</button>
+      <nav class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="sambutan.html">Sambutan</a>
+        <a href="kompetensi.html">Kompetensi</a>
+        <a href="galeri.html" class="active">Galeri</a>
+        <a href="berita.html">Berita</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 3rem 0;">
+    <div class="container">
+      <h1 style="color: white; margin-bottom: 0.5rem;">Galeri Kegiatan</h1>
+      <p>Dokumentasi momen-momen berharga di SMK Negeri 2 Lebong</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding: 3rem 0;">
+    <!-- Tab Navigation -->
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center;">
+      <button class="tab-btn active" onclick="showTab('foto')"><i class="fas fa-images"></i> Foto Kegiatan</button>
+      <button class="tab-btn" onclick="showTab('video')"><i class="fas fa-video"></i> Video Dokumentasi</button>
+    </div>
+
+    <!-- Foto Section -->
+    <div id="fotoSection">
+      <div id="foto-grid" class="gallery-grid">
+        <div class="loading">Memuat galeri foto...</div>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div id="videoSection" style="display: none;">
+      <div id="video-list" class="grid-2">
+        <div class="loading">Memuat galeri video...</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img id="modalImage" src="" alt="Foto Kegiatan">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-school"></i> SMKN 2 Lebong</h4>
+          <p>Sekolah kejuruan negeri terbaik di Kabupaten Lebong.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-envelope"></i> smkn2lebong@sch.id</li>
+            <li><i class="fab fa-whatsapp"></i> +62 812-3456-7890</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Link</h4>
+          <ul>
+            <li><a href="ppdb.html">PPDB 2026/2027</a></li>
+            <li><a href="informasi.html">Informasi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ikuti Kami</h4>
+          <div style="display: flex; gap: 1rem;">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024-<span id="current-year"></span> SMK Negeri 2 Lebong.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function showTab(tabName) {
+      const fotoSection = document.getElementById('fotoSection');
+      const videoSection = document.getElementById('videoSection');
+      const buttons = document.querySelectorAll('.tab-btn');
+      
+      if (tabName === 'foto') {
+        fotoSection.style.display = 'block';
+        videoSection.style.display = 'none';
+        buttons[0].classList.add('active');
+        buttons[1].classList.remove('active');
+      } else {
+        fotoSection.style.display = 'none';
+        videoSection.style.display = 'block';
+        buttons[0].classList.remove('active');
+        buttons[1].classList.add('active');
+      }
+    }
+
+    function openModal(imgSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modal.classList.add('active');
+      modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+
+    // Load Foto
+    fetch('assets/galeri_foto.txt')
+      .then(res => res.text())
+      .then(data => {
+        const lines = data.trim().split(/\r?\n/).filter(line => line.trim());
+        const container = document.getElementById('foto-grid');
+        
+        if (lines.length === 0) {
+          container.innerHTML = '<p class="alert alert-info">Belum ada foto yang diupload.</p>';
+          return;
+        }
+        
+        let html = '';
+        lines.forEach(url => {
+          html += `
+            <div class="gallery-item" onclick="openModal('${url}')">
+              <img src="${url}" alt="Foto Kegiatan" loading="lazy">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i> Klik untuk perbesar
+              </div>
+            </div>
+          `;
+        });
+        container.innerHTML = html;
+      })
+      .catch(() => {
+        document.getElementById('foto-grid').innerHTML = '<p class="alert alert-info">Gagal memuat galeri foto.</p>';
+      });
+
+    // Load Video
+    fetch('assets/galeri_video.txt')
+      .then(res => res.text())
+      .then(data => {
+        const blocks = data.split(/#(.+?)\n/).slice(1);
+        const container = document.getElementById('video-list');
+        
+        if (blocks.length === 0) {
+          container.innerHTML = '<p class="alert alert-info">Belum ada video yang diupload.</p>';
+          return;
+        }
+        
+        let html = '';
+        for (let i = 0; i < blocks.length; i += 2) {
+          const title = blocks[i].trim();
+          const url = blocks[i+1]?.trim();
+          
+          if (!url) continue;
+          
+          if (url.includes('youtube.com') || url.includes('youtu.be')) {
+            let videoId = '';
+            if (url.includes('embed')) {
+              videoId = url.split('/').pop();
+            } else if (url.includes('youtu.be')) {
+              videoId = url.split('/').pop();
+            } else {
+              const urlParams = new URL(url).searchParams;
+              videoId = urlParams.get('v');
+            }
+            
+            html += `
+              <div class="card">
+                <div class="card-body">
+                  <h3><i class="fab fa-youtube" style="color: #ff0000;"></i> ${escapeHtml(title)}</h3>
+                  <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            `;
+          } else if (url.includes('facebook.com')) {
+            html += `
+              <div class="card">
+                <div class="card-body">
+                  <h3><i class="fab fa-facebook"></i> ${escapeHtml(title)}</h3>
+                  <p>Video tersedia di Facebook.</p>
+                  <a href="${url}" class="btn btn-primary" target="_blank">Tonton di Facebook <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            `;
+          }
+        }
+        
+        container.innerHTML = html || '<p class="alert alert-info">Tidak ada video yang dapat ditampilkan.</p>';
+      })
+      .catch(() => {
+        document.getElementById('video-list').innerHTML = '<p class="alert alert-info">Gagal memuat galeri video.</p>';
+      });
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+</body>
+</html>

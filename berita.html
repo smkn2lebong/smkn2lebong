@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berita Terbaru | SMK Negeri 2 Lebong</title>
+  <meta name="description" content="Kumpulan berita terbaru dan informasi kegiatan SMK Negeri 2 Lebong. Update prestasi siswa, event sekolah, dan pengumuman resmi." />
+  <meta name="keywords" content="Berita SMKN 2 Lebong, Kegiatan Sekolah, Prestasi Siswa, Informasi SMK" />
+  <meta name="author" content="SMK Negeri 2 Lebong" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="header-top">
+    <div class="container">
+      <div class="contact-info">
+        <span><i class="fas fa-map-marker-alt"></i> Tangua, Kec. Uram Jaya, Lebong, Bengkulu</span>
+        <span style="margin-left: 1.5rem;"><i class="fas fa-envelope"></i> smkn2lebong@sch.id</span>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Logo SMK Negeri 2 Lebong" class="logo-img">
+        <div class="logo-text">
+          <h1>SMK Negeri 2 Lebong</h1>
+          <p>NPSN 10703078 | Terakreditasi B</p>
+        </div>
+      </div>
+      <button class="menu-toggle">☰</button>
+      <nav class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="sambutan.html">Sambutan</a>
+        <a href="kompetensi.html">Kompetensi</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="berita.html" class="active">Berita</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 3rem 0;">
+    <div class="container">
+      <h1 style="color: white; margin-bottom: 0.5rem;">Berita & Informasi</h1>
+      <p>Update terbaru seputar kegiatan dan prestasi SMK Negeri 2 Lebong</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding: 3rem 0;">
+    <!-- Search Box -->
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card-body">
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <i class="fas fa-search" style="font-size: 1.25rem; color: var(--gray-500);"></i>
+          <input type="text" id="searchInput" placeholder="Cari berita berdasarkan judul atau isi..." 
+                 style="flex: 1; padding: 0.75rem 1rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font-size: 1rem;">
+          <button onclick="filterBerita()" class="btn btn-primary" style="margin: 0;">
+            <i class="fas fa-search"></i> Cari
+          </button>
+          <button onclick="resetFilter()" class="btn btn-secondary" style="margin: 0; background: var(--gray-400);">
+            <i class="fas fa-undo"></i> Reset
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div id="blog-posts" class="grid-2" style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
+      <div class="loading">Memuat berita terbaru...</div>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem;"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-school"></i> SMKN 2 Lebong</h4>
+          <p>Sekolah kejuruan negeri terbaik di Kabupaten Lebong yang berkomitmen mencetak lulusan unggul dan kompeten.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak Cepat</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> Tangua, Lebong, Bengkulu</li>
+            <li><i class="fas fa-envelope"></i> smkn2lebong@sch.id</li>
+            <li><i class="fab fa-whatsapp"></i> +62 812-3456-7890</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Link Penting</h4>
+          <ul>
+            <li><a href="ppdb.html">Pendaftaran PPDB</a></li>
+            <li><a href="informasi.html">Informasi PPDB</a></li>
+            <li><a href="kompetensi.html">Kompetensi Keahlian</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ikuti Kami</h4>
+          <div style="display: flex; gap: 1rem;">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024-<span id="current-year"></span> SMK Negeri 2 Lebong. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    let allBerita = [];
+    let currentPage = 1;
+    let currentSearchTerm = '';
+    const postsPerPage = 6;
+
+    const proxy = "https://api.allorigins.win/get?url=";
+    const feedURL = encodeURIComponent("https://smknegeri2lebong.blogspot.com/feeds/posts/default?alt=json");
+
+    async function loadBerita() {
+      const container = document.getElementById('blog-posts');
+      container.innerHTML = '<div class="loading">Memuat berita terbaru...</div>';
+      
+      try {
+        const response = await fetch(proxy + feedURL);
+        const result = await response.json();
+        const data = JSON.parse(result.contents);
+        const entries = data.feed.entry || [];
+        
+        if (entries.length === 0) {
+          container.innerHTML = '<div class="alert alert-info">Belum ada berita yang tersedia.</div>';
+          return;
+        }
+        
+        allBerita = entries.map(entry => {
+          const content = entry.content?.$t || '';
+          return {
+            title: entry.title.$t,
+            link: entry.link.find(l => l.rel === 'alternate').href,
+            published: new Date(entry.published.$t),
+            publishedStr: new Date(entry.published.$t).toLocaleDateString("id-ID", {
+              day: 'numeric', month: 'long', year: 'numeric'
+            }),
+            thumbnail: entry.media$thumbnail?.url.replace(/\/s72\-c/, "/s600") || '',
+            content: content,
+            snippet: content.replace(/<[^>]+>/g, "").slice(0, 150) + (content.length > 150 ? '...' : '')
+          };
+        });
+        
+        renderBerita();
+      } catch (error) {
+        console.error("Gagal memuat berita:", error);
+        container.innerHTML = '<div class="alert alert-info">Tidak dapat memuat berita saat ini. Silakan coba lagi nanti.</div>';
+      }
+    }
+
+    function renderBerita() {
+      let filteredBerita = allBerita;
+      
+      if (currentSearchTerm) {
+        filteredBerita = allBerita.filter(berita => 
+          berita.title.toLowerCase().includes(currentSearchTerm.toLowerCase()) || 
+          berita.snippet.toLowerCase().includes(currentSearchTerm.toLowerCase())
+        );
+      }
+      
+      const totalPages = Math.ceil(filteredBerita.length / postsPerPage);
+      const start = (currentPage - 1) * postsPerPage;
+      const end = start + postsPerPage;
+      const pageBerita = filteredBerita.slice(start, end);
+      
+      const container = document.getElementById('blog-posts');
+      
+      if (pageBerita.length === 0) {
+        container.innerHTML = '<div class="alert alert-info">Tidak ada berita yang ditemukan.</div>';
+        document.getElementById('pagination').innerHTML = '';
+        return;
+      }
+      
+      let html = '';
+      pageBerita.forEach(berita => {
+        html += `
+          <div class="card" style="overflow: hidden;">
+            ${berita.thumbnail ? `<img src="${berita.thumbnail}" alt="${escapeHtml(berita.title)}" style="width: 100%; height: 200px; object-fit: cover;">` : ''}
+            <div class="card-body">
+              <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--primary-soft); color: var(--primary); border-radius: 20px; font-size: 0.7rem; font-weight: 600; margin-bottom: 1rem;">
+                <i class="far fa-newspaper"></i> Berita Sekolah
+              </span>
+              <h3 style="margin-bottom: 0.75rem; font-size: 1.25rem;">
+                <a href="${berita.link}" target="_blank" style="color: var(--gray-900); text-decoration: none; transition: var(--transition);">
+                  ${escapeHtml(berita.title)}
+                </a>
+              </h3>
+              <div style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--gray-500);">
+                <span><i class="far fa-calendar-alt"></i> ${berita.publishedStr}</span>
+              </div>
+              <p style="color: var(--gray-600); margin-bottom: 1rem; line-height: 1.6;">${escapeHtml(berita.snippet)}</p>
+              <a href="${berita.link}" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: var(--transition);">
+                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        `;
+      });
+      
+      container.innerHTML = html;
+      
+      // Render pagination
+      let paginationHtml = '';
+      for (let i = 1; i <= totalPages; i++) {
+        paginationHtml += `<button onclick="goToPage(${i})" style="padding: 0.5rem 1rem; border: 1px solid var(--gray-300); background: ${i === currentPage ? 'var(--primary)' : 'var(--white)'}; color: ${i === currentPage ? 'white' : 'var(--gray-700)'}; border-radius: var(--radius); cursor: pointer; transition: var(--transition);">${i}</button>`;
+      }
+      document.getElementById('pagination').innerHTML = paginationHtml;
+    }
+
+    function filterBerita() {
+      currentSearchTerm = document.getElementById('searchInput').value;
+      currentPage = 1;
+      renderBerita();
+    }
+
+    function resetFilter() {
+      document.getElementById('searchInput').value = '';
+      currentSearchTerm = '';
+      currentPage = 1;
+      renderBerita();
+    }
+
+    function goToPage(page) {
+      currentPage = page;
+      renderBerita();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Enter key search
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        filterBerita();
+      }
+    });
+
+    loadBerita();
+  </script>
+</body>
+</html>
