@@ -3,635 +3,378 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPMB Segera Dibuka | SMK Negeri 2 Lebong</title>
+  <title>SMK Negeri 2 Lebong | Sekolah Kejuruan Unggulan di Kabupaten Lebong</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Pendaftaran SPMB SMK Negeri 2 Lebong Tahun Ajaran 2026/2027 segera dibuka. Informasi jadwal pendaftaran akan diumumkan di sini." />
-  <meta name="keywords" content="SPMB SMKN 2 Lebong, Pendaftaran SMK Lebong, PPDB 2026, Segera Dibuka" />
+  <meta name="description" content="SMK Negeri 2 Lebong (NPSN 10703078) - Sekolah kejuruan negeri terbaik di Kabupaten Lebong dengan 5 kompetensi keahlian unggulan. PPDB 2026/2027 telah dibuka. GRATIS!" />
+  <meta name="keywords" content="SMK Negeri 2 Lebong, PPDB 2026, Sekolah Kejuruan Lebong, SMK Tangua, SMK Uram Jaya" />
+  <meta name="author" content="SMK Negeri 2 Lebong" />
   <meta name="robots" content="index, follow" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="SPMB Segera Dibuka | SMK Negeri 2 Lebong" />
-  <meta property="og:description" content="Pendaftaran SPMB SMK Negeri 2 Lebong segera dibuka. Siapkan dokumen Anda!" />
+  <meta property="og:title" content="SMK Negeri 2 Lebong | Sekolah Kejuruan Unggulan" />
+  <meta property="og:description" content="Daftar sekarang di SMK Negeri 2 Lebong. GRATIS! 5 jurusan unggulan siap kerja." />
   <meta property="og:image" content="https://smkn2lebong.sch.id/assets/img/hero.jpg" />
-  <meta property="og:url" content="https://smkn2lebong.sch.id/spmb/" />
+  <meta property="og:url" content="https://smkn2lebong.sch.id" />
   <meta property="og:type" content="website" />
   
-  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://smkn2lebong.sch.id/" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   
-  <style>
-    :root {
-      --primary: #0a3d62;
-      --primary-dark: #052c47;
-      --primary-light: #1e6091;
-      --accent: #e67e22;
-      --accent-dark: #d35400;
-      --success: #27ae60;
-      --warning: #f39c12;
-      --white: #ffffff;
-      --gray-50: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
-      --gray-300: #cbd5e1;
-      --gray-400: #94a3b8;
-      --gray-500: #64748b;
-      --gray-600: #475569;
-      --gray-700: #334155;
-      --gray-800: #1e293b;
-      --gray-900: #0f172a;
-      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-      --radius: 0.5rem;
-      --radius-lg: 1rem;
-      --transition: all 0.3s ease;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
-      color: var(--gray-800);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Header */
-    .header {
-      background: var(--white);
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .header .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo-img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .logo-area h1 {
-      font-size: 1.25rem;
-      color: var(--primary);
-      margin-bottom: 0;
-    }
-
-    .logo-area p {
-      font-size: 0.75rem;
-      color: var(--gray-500);
-      margin-top: 0.25rem;
-    }
-
-    .btn-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: var(--gray-100);
-      color: var(--primary);
-      text-decoration: none;
-      border-radius: var(--radius);
-      font-weight: 500;
-      font-size: 0.875rem;
-      transition: var(--transition);
-    }
-
-    .btn-back:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    /* Main Content */
-    .main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1.5rem;
-    }
-
-    .coming-soon-card {
-      max-width: 700px;
-      width: 100%;
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
-      text-align: center;
-      animation: fadeInUp 0.6s ease;
-    }
-
-    .card-header {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      padding: 2rem;
-      color: var(--white);
-    }
-
-    .card-header .icon {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-
-    .card-header h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: var(--white);
-    }
-
-    .card-header p {
-      opacity: 0.9;
-      font-size: 1rem;
-    }
-
-    .card-body {
-      padding: 2rem;
-    }
-
-    /* Countdown Timer */
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .countdown-item {
-      background: var(--gray-100);
-      border-radius: var(--radius);
-      padding: 1rem;
-      min-width: 80px;
-      text-align: center;
-    }
-
-    .countdown-number {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary);
-      display: block;
-      line-height: 1;
-    }
-
-    .countdown-label {
-      font-size: 0.75rem;
-      color: var(--gray-500);
-      margin-top: 0.5rem;
-      display: block;
-    }
-
-    /* Info Box */
-    .info-box {
-      background: var(--gray-50);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-      text-align: left;
-    }
-
-    .info-box h3 {
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .info-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .info-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--gray-200);
-      font-size: 0.875rem;
-    }
-
-    .info-list li:last-child {
-      border-bottom: none;
-    }
-
-    .info-list li i {
-      width: 20px;
-      color: var(--accent);
-    }
-
-    /* Alert */
-    .alert {
-      padding: 1rem;
-      border-radius: var(--radius);
-      margin: 1rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .alert-warning {
-      background: #fff3cd;
-      border-left: 4px solid var(--warning);
-      color: #856404;
-    }
-
-    .alert-info {
-      background: #e8f0f8;
-      border-left: 4px solid var(--primary);
-      color: #0c5460;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: var(--radius);
-      font-weight: 600;
-      font-size: 0.875rem;
-      text-decoration: none;
-      transition: var(--transition);
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--primary);
-      color: var(--primary);
-    }
-
-    .btn-outline:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--gray-900);
-      color: var(--gray-400);
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .footer a {
-      color: var(--gray-400);
-      text-decoration: none;
-      transition: var(--transition);
-    }
-
-    .footer a:hover {
-      color: var(--white);
-    }
-
-    /* Notification Bell */
-    .notify-box {
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      margin-top: 1.5rem;
-      color: var(--white);
-    }
-
-    .notify-box p {
-      margin-bottom: 1rem;
-    }
-
-    .notify-input {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .notify-input input {
-      flex: 1;
-      padding: 0.75rem 1rem;
-      border: none;
-      border-radius: var(--radius);
-      font-family: inherit;
-    }
-
-    .notify-input input:focus {
-      outline: none;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
-
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .header .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .logo-area {
-        flex-direction: column;
-      }
-      
-      .card-header h2 {
-        font-size: 1.5rem;
-      }
-      
-      .countdown {
-        gap: 0.75rem;
-      }
-      
-      .countdown-item {
-        min-width: 60px;
-        padding: 0.75rem;
-      }
-      
-      .countdown-number {
-        font-size: 1.5rem;
-      }
-      
-      .button-group {
-        flex-direction: column;
-      }
-      
-      .btn {
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
+  <!-- Top Bar -->
+  <div class="header-top">
     <div class="container">
-      <div class="logo-area">
-        <img src="../logo.jpeg" alt="Logo SMK Negeri 2 Lebong" class="logo-img" onerror="this.src='https://placehold.co/50x50/0a3d62/white?text=SMK'">
-        <div>
+      <div class="contact-info">
+        <span><i class="fas fa-map-marker-alt"></i> Tangua, Kec. Uram Jaya, Lebong, Bengkulu</span>
+        <span style="margin-left: 1.5rem;"><i class="fas fa-envelope"></i> smkn2lebong@sch.id</span>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <div class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Logo SMK Negeri 2 Lebong" class="logo-img">
+        <div class="logo-text">
           <h1>SMK Negeri 2 Lebong</h1>
           <p>NPSN 10703078 | Terakreditasi B</p>
         </div>
       </div>
-      <a href="../index.html" class="btn-back">
-        <i class="fas fa-arrow-left"></i> Kembali ke Website Utama
-      </a>
+      <button class="menu-toggle">☰</button>
+      <nav class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="sambutan.html">Sambutan</a>
+        <a href="kompetensi.html">Kompetensi</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="berita.html">Berita</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
     </div>
-  </header>
+  </div>
 
-  <!-- Main Content -->
-  <main class="main">
-    <div class="coming-soon-card">
-      <div class="card-header">
-        <div class="icon pulse">
-          <i class="fas fa-calendar-alt"></i>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Membangun Generasi <span style="color: #ffc107;">Unggul & Kompeten</span></h1>
+        <p>SMK Negeri 2 Lebong hadir sebagai pusat pendidikan kejuruan terbaik di Kabupaten Lebong. Dengan 5 kompetensi keahlian unggulan, fasilitas modern, dan mitra industri terpercaya.</p>
+        <div class="hero-buttons">
+          <a href="ppdb.html" class="btn btn-primary"><i class="fas fa-user-graduate"></i> Daftar PPDB 2026/2027</a>
+          <a href="informasi.html" class="btn btn-outline"><i class="fas fa-info-circle"></i> Info Lengkap</a>
         </div>
-        <h2>SPMB Segera Dibuka!</h2>
-        <p>Pendaftaran Peserta Didik Baru SMK Negeri 2 Lebong</p>
-        <p style="font-size: 0.875rem; margin-top: 0.5rem;">Tahun Ajaran 2026/2027</p>
-      </div>
-      
-      <div class="card-body">
-        <!-- Countdown Timer -->
-        <div class="countdown" id="countdown">
-          <div class="countdown-item">
-            <span class="countdown-number" id="days">00</span>
-            <span class="countdown-label">Hari</span>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="450">0</span>
+            <span class="stat-label">Siswa Aktif</span>
           </div>
-          <div class="countdown-item">
-            <span class="countdown-number" id="hours">00</span>
-            <span class="countdown-label">Jam</span>
+          <div class="stat-item">
+            <span class="stat-number" data-count="35">0</span>
+            <span class="stat-label">Guru Profesional</span>
           </div>
-          <div class="countdown-item">
-            <span class="countdown-number" id="minutes">00</span>
-            <span class="countdown-label">Menit</span>
+          <div class="stat-item">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label">Jurusan Unggulan</span>
           </div>
-          <div class="countdown-item">
-            <span class="countdown-number" id="seconds">00</span>
-            <span class="countdown-label">Detik</span>
+          <div class="stat-item">
+            <span class="stat-number" data-count="92">0</span>
+            <span class="stat-label">% Terserap Kerja</span>
           </div>
-        </div>
-
-        <!-- Alert -->
-        <div class="alert alert-warning">
-          <i class="fas fa-info-circle"></i>
-          <span>Pendaftaran SPMB SMK Negeri 2 Lebong <strong>belum dibuka</strong>. Pantau website ini untuk informasi jadwal resmi.</span>
-        </div>
-
-        <!-- Info Box -->
-        <div class="info-box">
-          <h3><i class="fas fa-file-alt"></i> Persiapkan Dokumen Berikut:</h3>
-          <ul class="info-list">
-            <li><i class="fas fa-id-card"></i> Kartu Keluarga (KK)</li>
-            <li><i class="fas fa-diploma"></i> Ijazah / SKL SMP/MTs</li>
-            <li><i class="fas fa-qrcode"></i> NISN (10 digit)</li>
-            <li><i class="fas fa-fingerprint"></i> NIK (16 digit)</li>
-            <li><i class="fas fa-image"></i> Pas foto 3x4 (3 lembar)</li>
-          </ul>
-        </div>
-
-        <!-- Jurusan -->
-        <div class="info-box">
-          <h3><i class="fas fa-graduation-cap"></i> Kompetensi Keahlian:</h3>
-          <ul class="info-list">
-            <li><i class="fas fa-tshirt"></i> Tata Busana</li>
-            <li><i class="fas fa-bolt"></i> Teknik Instalasi Tenaga Listrik (TITL)</li>
-            <li><i class="fas fa-motorcycle"></i> Teknik dan Bisnis Sepeda Motor (TBSM)</li>
-            <li><i class="fas fa-car"></i> Teknik Kendaraan Ringan Otomotif (TKRO)</li>
-            <li><i class="fas fa-palette"></i> Desain Komunikasi Visual (DKV)</li>
-          </ul>
-        </div>
-
-        <!-- Important Notes -->
-        <div class="alert alert-info">
-          <i class="fas fa-check-circle"></i>
-          <span><strong>Pendaftaran GRATIS!</strong> Tidak dipungut biaya apapun.</span>
-        </div>
-
-        <!-- Notification Box -->
-        <div class="notify-box">
-          <p><i class="fas fa-bell"></i> <strong>Dapatkan Notifikasi</strong></p>
-          <p style="font-size: 0.875rem;">Masukkan nomor WhatsApp Anda untuk mendapatkan pemberitahuan saat pendaftaran dibuka.</p>
-          <div class="notify-input">
-            <input type="tel" id="notifyWa" placeholder="08xxxxxxxxxx">
-            <button class="btn btn-primary" id="btnNotify" style="background: var(--white); color: var(--primary);">
-              <i class="fab fa-whatsapp"></i> Notifikasi Saya
-            </button>
-          </div>
-          <p id="notifyMsg" style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.8;"></p>
-        </div>
-
-        <!-- Button Group -->
-        <div class="button-group">
-          <a href="../index.html" class="btn btn-outline">
-            <i class="fas fa-home"></i> Kembali ke Beranda
-          </a>
-          <a href="../informasi.html" class="btn btn-primary">
-            <i class="fas fa-info-circle"></i> Info PPDB Lengkap
-          </a>
         </div>
       </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/600x400/0a3d62/white?text=SMK+Negeri+2+Lebong" alt="SMK Negeri 2 Lebong">
+      </div>
     </div>
-  </main>
+  </section>
+
+  <!-- Jurusan Section -->
+  <section class="container" style="padding: 4rem 0;">
+    <div class="text-center">
+      <h2 class="section-title">Kompetensi Keahlian Unggulan</h2>
+      <p style="color: var(--gray-600); max-width: 600px; margin: 0 auto 2rem;">Pilih jurusan yang sesuai dengan minat dan bakat Anda untuk masa depan yang cerah.</p>
+    </div>
+    <div class="jurusan-grid">
+      <div class="jurusan-card">
+        <div class="jurusan-card-header">
+          <div class="jurusan-icon"><i class="fas fa-tshirt"></i></div>
+          <h3>Tata Busana</h3>
+        </div>
+        <div class="jurusan-card-body">
+          <span class="jurusan-tag">Fashion & Desain</span>
+          <p>Mengembangkan kreativitas dalam dunia fashion, desain mode, dan wirausaha butik.</p>
+          <ul style="margin-top: 1rem; padding-left: 1.25rem; color: var(--gray-600);">
+            <li>Desain Mode</li>
+            <li>Menjahit Profesional</li>
+            <li>Digital Fashion</li>
+          </ul>
+        </div>
+      </div>
+      <div class="jurusan-card">
+        <div class="jurusan-card-header" style="background: linear-gradient(135deg, #e67e22, #d35400);">
+          <div class="jurusan-icon"><i class="fas fa-bolt"></i></div>
+          <h3>TITL</h3>
+        </div>
+        <div class="jurusan-card-body">
+          <span class="jurusan-tag">Teknik Listrik</span>
+          <p>Ahli di bidang instalasi listrik, otomasi industri, dan keselamatan ketenagalistrikan.</p>
+          <ul style="margin-top: 1rem; padding-left: 1.25rem; color: var(--gray-600);">
+            <li>Instalasi Listrik</li>
+            <li>Panel & Kontrol</li>
+            <li>Sertifikasi K3</li>
+          </ul>
+        </div>
+      </div>
+      <div class="jurusan-card">
+        <div class="jurusan-card-header" style="background: linear-gradient(135deg, #27ae60, #1e8449);">
+          <div class="jurusan-icon"><i class="fas fa-motorcycle"></i></div>
+          <h3>TBSM</h3>
+        </div>
+        <div class="jurusan-card-body">
+          <span class="jurusan-tag">Otomotif Motor</span>
+          <p>Perawatan dan bisnis sepeda motor modern dengan teknologi injeksi terkini.</p>
+          <ul style="margin-top: 1rem; padding-left: 1.25rem; color: var(--gray-600);">
+            <li>Mesin & Kelistrikan</li>
+            <li>Manajemen Bengkel</li>
+            <li>Magang AHASS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="jurusan-card">
+        <div class="jurusan-card-header" style="background: linear-gradient(135deg, #2980b9, #1a5276);">
+          <div class="jurusan-icon"><i class="fas fa-car"></i></div>
+          <h3>TKRO</h3>
+        </div>
+        <div class="jurusan-card-body">
+          <span class="jurusan-tag">Otomotif Mobil</span>
+          <p>Teknik kendaraan ringan otomotif dengan standar industri terbaru.</p>
+          <ul style="margin-top: 1rem; padding-left: 1.25rem; color: var(--gray-600);">
+            <li>Sistem Engine</li>
+            <li>Kelistrikan Mobil</li>
+            <li>AC & Diagnostik</li>
+          </ul>
+        </div>
+      </div>
+      <div class="jurusan-card">
+        <div class="jurusan-card-header" style="background: linear-gradient(135deg, #8e44ad, #6c3483);">
+          <div class="jurusan-icon"><i class="fas fa-palette"></i></div>
+          <h3>DKV</h3>
+        </div>
+        <div class="jurusan-card-body">
+          <span class="jurusan-tag">Desain Grafis</span>
+          <p>Kreator desain grafis, ilustrasi digital, dan multimedia profesional.</p>
+          <ul style="margin-top: 1rem; padding-left: 1.25rem; color: var(--gray-600);">
+            <li>Adobe Suite</li>
+            <li>Fotografi & Video</li>
+            <li>UI/UX Design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="number" data-count="100">0</span>
+          <span class="label">Pendaftar 2026</span>
+        </div>
+        <div class="stat-card">
+          <span class="number" data-count="15">0</span>
+          <span class="label">Mitra Industri</span>
+        </div>
+        <div class="stat-card">
+          <span class="number" data-count="30">0</span>
+          <span class="label">Prestasi Sekolah</span>
+        </div>
+        <div class="stat-card">
+          <span class="number" data-count="500">0</span>
+          <span class="label">Alumni Terserap</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PPDB Banner -->
+  <div class="container" style="padding: 2rem 0;">
+    <div class="alert alert-success" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <i class="fas fa-graduation-cap" style="font-size: 1.5rem; margin-right: 1rem;"></i>
+        <strong style="font-size: 1.125rem;">Pendaftaran PPDB 2026/2027 Telah Dibuka!</strong>
+        <p style="margin: 0; font-size: 0.875rem;">Pendaftaran GRATIS, tidak dipungut biaya apapun.</p>
+      </div>
+      <a href="ppdb.html" class="btn btn-primary" style="background: var(--success);">Daftar Sekarang <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Apa Kata Alumni?</h2>
+        <p style="color: var(--gray-600);">Pengalaman nyata dari lulusan SMK Negeri 2 Lebong</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Alhamdulillah, berkat pendidikan di SMKN 2 Lebong jurusan TBSM, saya sekarang bekerja di AHASS Honda sebagai mekanik senior. Ilmu yang didapat sangat berguna!"</p>
+          <div class="testimonial-author">
+            <div>
+              <div class="author-name">Ahmad Fauzi</div>
+              <div class="author-title">Mekanik AHASS Honda</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Jurusan DKV membuka peluang saya untuk bekerja di studio desain grafis. Fasilitas dan guru-gurunya sangat mendukung perkembangan kreativitas."</p>
+          <div class="testimonial-author">
+            <div>
+              <div class="author-name">Siti Rahma</div>
+              <div class="author-title">Graphic Designer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Setelah lulus dari jurusan Tata Busana, saya membuka butik sendiri. Dukungan dari sekolah sangat luar biasa dalam memulai usaha."</p>
+          <div class="testimonial-author">
+            <div>
+              <div class="author-name">Rina Susanti</div>
+              <div class="author-title">Wirausaha Butik</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Berita Section -->
+  <div class="container" style="padding: 4rem 0;">
+    <div class="text-center">
+      <h2 class="section-title">Berita & Informasi Terbaru</h2>
+    </div>
+    <div id="berita-preview" class="blog-grid">
+      <div class="loading">Memuat berita terbaru...</div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="berita.html" class="btn btn-secondary">Lihat Semua Berita <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2024-2026 SMK Negeri 2 Lebong | SPMB Online - GRATIS</p>
-      <p style="margin-top: 0.5rem; font-size: 0.75rem;">
-        <a href="../index.html"><i class="fas fa-globe"></i> Website Resmi SMK Negeri 2 Lebong</a>
-      </p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-school"></i> SMKN 2 Lebong</h4>
+          <p>Sekolah kejuruan negeri terbaik di Kabupaten Lebong yang berkomitmen mencetak lulusan unggul dan kompeten.</p>
+          <div style="margin-top: 1rem;">
+            <strong>NPSN:</strong> 10703078<br>
+            <strong>Akreditasi:</strong> B
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak Cepat</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> Tangua, Kec. Uram Jaya, Lebong, Bengkulu</li>
+            <li><i class="fas fa-phone"></i> (0732) 12345</li>
+            <li><i class="fas fa-envelope"></i> smkn2lebong@sch.id</li>
+            <li><i class="fab fa-whatsapp"></i> +62 812-3456-7890</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Link Penting</h4>
+          <ul>
+            <li><a href="ppdb.html">Pendaftaran PPDB</a></li>
+            <li><a href="informasi.html">Informasi PPDB</a></li>
+            <li><a href="kompetensi.html">Kompetensi Keahlian</a></li>
+            <li><a href="galeri.html">Galeri Kegiatan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Jam Kerja</h4>
+          <ul>
+            <li>Senin - Kamis: 07:30 - 15:30</li>
+            <li>Jumat: 07:30 - 14:00</li>
+            <li>Sabtu - Minggu: Libur</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024-<span id="current-year"></span> SMK Negeri 2 Lebong. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem;">Dikelola oleh Tim IT SMKN 2 Lebong</p>
+      </div>
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
   <script>
-    // ========== COUNTDOWN TIMER ==========
-    // Set target date: 9 Juni 2026 (perkiraan pembukaan PPDB)
-    const targetDate = new Date(2026, 5, 9, 0, 0, 0); // Bulan ke-5 = Juni
-    
-    function updateCountdown() {
-      const now = new Date();
-      const diff = targetDate - now;
-      
-      if (diff <= 0) {
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
-        return;
-      }
-      
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      
-      document.getElementById('days').textContent = days.toString().padStart(2, '0');
-      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-    }
-    
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-    
-    // ========== NOTIFICATION BUTTON ==========
-    const btnNotify = document.getElementById('btnNotify');
-    const notifyWa = document.getElementById('notifyWa');
-    const notifyMsg = document.getElementById('notifyMsg');
-    
-    btnNotify.addEventListener('click', async function() {
-      const waNumber = notifyWa.value.trim();
-      
-      if (!waNumber) {
-        notifyMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Masukkan nomor WhatsApp Anda!';
-        notifyMsg.style.color = '#ffc107';
-        return;
-      }
-      
-      if (!/^08\d{8,13}$/.test(waNumber)) {
-        notifyMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Format nomor tidak valid. Contoh: 081234567890';
-        notifyMsg.style.color = '#ffc107';
-        return;
-      }
-      
-      // Simulasi pengiriman ke Telegram (opsional)
-      const waLink = waNumber.startsWith("0") ? "62" + waNumber.slice(1) : waNumber;
-      const text = `📢 *NOTIFIKASI SPMB*\n\nNomor WhatsApp: ${waNumber}\nMeminta notifikasi saat pendaftaran SPMB SMK Negeri 2 Lebong dibuka.`;
-      
-      try {
-        // Opsional: kirim ke Telegram admin
-        await fetch("https://api.telegram.org/bot7680568615:AAHfC-y_pnJHuZf3Qvu6XShAOryBD_h3T2A/sendMessage", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            chat_id: "-4653714507",
-            text: text,
-            parse_mode: "Markdown"
-          })
-        });
+    // Load preview berita untuk halaman depan
+    const previewContainer = document.getElementById('berita-preview');
+    const proxy = "https://api.allorigins.win/get?url=";
+    const feedURL = encodeURIComponent("https://smknegeri2lebong.blogspot.com/feeds/posts/default?alt=json");
+
+    fetch(proxy + feedURL)
+      .then(res => res.json())
+      .then(result => {
+        const data = JSON.parse(result.contents);
+        const entries = data.feed.entry || [];
         
-        notifyMsg.innerHTML = '<i class="fas fa-check-circle"></i> Terima kasih! Anda akan kami notifikasi via WhatsApp saat pendaftaran dibuka.';
-        notifyMsg.style.color = '#27ae60';
-        notifyWa.value = '';
-      } catch (error) {
-        notifyMsg.innerHTML = '<i class="fas fa-check-circle"></i> Terima kasih! Anda akan kami notifikasi saat pendaftaran dibuka.';
-        notifyMsg.style.color = '#27ae60';
-        notifyWa.value = '';
-      }
-    });
-    
-    // Enter key on input
-    notifyWa.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        btnNotify.click();
-      }
-    });
+        if (entries.length === 0) {
+          previewContainer.innerHTML = '<p style="text-align: center;">Belum ada berita terbaru.</p>';
+          return;
+        }
+        
+        let html = '';
+        entries.slice(0, 3).forEach(entry => {
+          const title = entry.title.$t;
+          const link = entry.link.find(l => l.rel === 'alternate').href;
+          const published = new Date(entry.published.$t).toLocaleDateString("id-ID", {
+            day: 'numeric', month: 'long', year: 'numeric'
+          });
+          const snippet = (entry.content?.$t || "").replace(/<[^>]+>/g, "").slice(0, 120) + "...";
+          
+          html += `
+            <div class="blog-card">
+              <div class="blog-content">
+                <span class="blog-date"><i class="far fa-calendar-alt"></i> ${published}</span>
+                <h4 class="blog-title">${escapeHtml(title)}</h4>
+                <p class="blog-excerpt">${escapeHtml(snippet)}</p>
+                <a href="${link}" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: none;">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          `;
+        });
+        previewContainer.innerHTML = html;
+      })
+      .catch(() => {
+        previewContainer.innerHTML = '<p style="text-align: center;">Tidak dapat memuat berita saat ini.</p>';
+      });
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
   </script>
 </body>
 </html>
