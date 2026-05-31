@@ -13,7 +13,7 @@
   
   <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
   <meta property="og:title" content="SMK Negeri 2 Lebong | SPMB 2026/2027 Telah Dibuka!" />
-  <meta property="og:description" content="Pendaftaran SPMB SMK Negeri 2 Lebong Tahun Ajaran 2026/2027. GRATIS! 5 jurusan unggulan: Tata Busana, TITL, TBSM, TKRO, DKV. Daftar sekarang!" />
+  <meta property="og:description" content="Pendaftaran SPMB SMK Negeri 2 Lebong Tahun Ajaran 2026/2027. GRATIS! 5 jurusan unggulan: Tata Busana, TITL, TSM, TKR, DKV. Daftar sekarang!" />
   <meta property="og:image" content="https://smkn2lebong.sch.id/assets/img/poster-spmb-2026.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
@@ -40,6 +40,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="css/style.css" />
+  
+  <style>
+    /* Style tambahan untuk alert migrasi */
+    .alert-migrasi {
+      background: #fee2e2;
+      border-left: 4px solid #dc2626;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .alert-migrasi i {
+      font-size: 1.5rem;
+      color: #dc2626;
+    }
+    .alert-migrasi .content {
+      flex: 1;
+    }
+    .alert-migrasi .content strong {
+      color: #dc2626;
+    }
+    .alert-migrasi .link {
+      background: #dc2626;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+    }
+    .alert-migrasi .link:hover {
+      background: #b91c1c;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 640px) {
+      .alert-migrasi {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -70,7 +115,7 @@
       </div>
       <button class="menu-toggle">☰</button>
       <nav class="nav-menu">
-        <a href="index.html">Beranda</a>
+        <a href="index.html" class="active">Beranda</a>
         <a href="profil.html">Profil</a>
         <a href="sambutan.html">Sambutan</a>
         <a href="kompetensi.html">Kompetensi</a>
@@ -118,6 +163,17 @@
     </div>
   </section>
 
+  <!-- ALERT MIGRASI AKUN -->
+  <div class="container" style="margin-top: -1rem;">
+    <div class="alert-migrasi">
+      <i class="fas fa-exclamation-triangle"></i>
+      <div class="content">
+        <strong>Perhatian untuk calon siswa!</strong> Bagi yang sudah membuat akun di halaman sebelumnya, <strong>wajib mengulang pendaftaran</strong> menggunakan link baru di bawah ini.
+      </div>
+      <a href="https://bengkuluprov.go.id" class="link" target="_blank"><i class="fas fa-external-link-alt"></i> Link Pendaftaran Baru</a>
+    </div>
+  </div>
+
   <!-- Jurusan Section -->
   <section class="container" style="padding: 4rem 0;">
     <div class="text-center">
@@ -158,7 +214,7 @@
       <div class="jurusan-card">
         <div class="jurusan-card-header" style="background: linear-gradient(135deg, #27ae60, #1e8449);">
           <div class="jurusan-icon"><i class="fas fa-motorcycle"></i></div>
-          <h3>TBSM</h3>
+          <h3>TSM</h3>
         </div>
         <div class="jurusan-card-body">
           <span class="jurusan-tag">Otomotif Motor</span>
@@ -173,7 +229,7 @@
       <div class="jurusan-card">
         <div class="jurusan-card-header" style="background: linear-gradient(135deg, #2980b9, #1a5276);">
           <div class="jurusan-icon"><i class="fas fa-car"></i></div>
-          <h3>TKRO</h3>
+          <h3>TKR</h3>
         </div>
         <div class="jurusan-card-body">
           <span class="jurusan-tag">Otomotif Mobil</span>
@@ -235,7 +291,7 @@
         <strong style="font-size: 1.125rem;">SPMB 2026/2027 Telah Dibuka!</strong>
         <p style="margin: 0; font-size: 0.875rem;">Pendaftaran GRATIS, tidak dipungut biaya apapun.</p>
       </div>
-      <a href="https://spmb-smk.bengkuluprov.go.id/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background: var(--success);">Daftar Sekarang <i class="fas fa-external-link-alt"></i></a>
+      <a href="https://bengkuluprov.go.id" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background: var(--success);">Daftar Sekarang <i class="fas fa-external-link-alt"></i></a>
     </div>
   </div>
 
@@ -248,7 +304,7 @@
       </div>
       <div class="testimonial-grid">
         <div class="testimonial-card">
-          <p class="testimonial-text">"Alhamdulillah, berkat pendidikan di SMKN 2 Lebong jurusan TBSM, saya sekarang bekerja di AHASS Honda sebagai mekanik senior. Ilmu yang didapat sangat berguna!"</p>
+          <p class="testimonial-text">"Alhamdulillah, berkat pendidikan di SMKN 2 Lebong jurusan TSM, saya sekarang bekerja di AHASS Honda sebagai mekanik senior. Ilmu yang didapat sangat berguna!"</p>
           <div class="testimonial-author">
             <div>
               <div class="author-name">Ahmad Fauzi</div>
@@ -309,7 +365,7 @@
             <li><i class="fas fa-map-marker-alt"></i> Tangua, Kec. Uram Jaya, Lebong, Bengkulu</li>
             <li><i class="fas fa-phone"></i> (0732) 12345</li>
             <li><i class="fas fa-envelope"></i> smkn2lebong@sch.id</li>
-            <li><i class="fab fa-whatsapp"></i> +62 822-8111-5991</li>
+            <li><i class="fab fa-whatsapp"></i> +62 853 5761 9885</li>
           </ul>
         </div>
         <div class="footer-col">
@@ -324,9 +380,9 @@
         <div class="footer-col">
           <h4>Jam Kerja</h4>
           <ul>
-            <li>Senin - Kamis: 07:30 - 15:30</li>
+            <li>Senin - Kamis: 07:30 - 14:00</li>
             <li>Jumat: 07:30 - 14:00</li>
-            <li>Sabtu - Minggu: Libur</li>
+            <li>Sabtu: 07:30 - 13:00</li>
           </ul>
         </div>
       </div>
